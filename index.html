@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quanto vali? Un'esperienza interattiva sulla profilazione digitale e il valore dei dati personali." />
+    <meta name="theme-color" content="#08080a" />
+    <title>Quanto vali?</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090b'/%3E%3Cpath d='M20 23a12 12 0 0 1 24 0v7h4v22H16V30h4v-7Zm7 7h10v-7a5 5 0 0 0-10 0v7Z' fill='%23ff355d'/%3E%3Ccircle cx='32' cy='41' r='4' fill='white'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Quanto vali? Torna all'inizio">
+        <span class="brand-mark" aria-hidden="true"></span><span>QUANTO VALI?</span>
+      </a>
+      <div class="status"><span class="status-light" aria-hidden="true"></span>SESSIONE LOCALE</div>
+    </header>
+    <main class="app-shell">
+      <section id="experience" class="experience" aria-labelledby="screenTitle">
+        <div id="stage" class="stage" aria-live="polite"></div>
+      </section>
+      <aside class="profile-panel" aria-label="Profilo digitale in costruzione">
+        <div class="profile-header"><span>PROFILO DIGITALE</span><span id="profileCode">#—</span></div>
+        <div class="completion-row"><span id="profilePercent">0%</span><span>completato</span></div>
+        <div class="meter" role="progressbar" aria-label="Completamento del profilo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="meterFill"></span></div>
+        <section class="data-section" aria-labelledby="knownTitle">
+          <h2 id="knownTitle">Dati osservati</h2>
+          <dl id="observedList" class="data-list"><div class="empty-state">Nessun dato visualizzato</div></dl>
+        </section>
+        <section class="data-section" aria-labelledby="inferredTitle">
+          <h2 id="inferredTitle">Deduzioni simulate</h2>
+          <div id="inferenceTags" class="tag-list"><span class="tag muted-tag">in attesa</span></div>
+        </section>
+        <p class="privacy-note"><span aria-hidden="true">●</span> Nessun dato lascia questo dispositivo.</p>
+      </aside>
+    </main>
+    <noscript>Questa esperienza richiede JavaScript per funzionare.</noscript>
+    <script src="app.js"></script>
+  </body>
+</html>
